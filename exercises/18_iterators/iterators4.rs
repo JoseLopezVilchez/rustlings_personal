@@ -7,6 +7,10 @@ fn factorial(num: u8) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    //Nota personal: te dejo otra alternativa por si sirve. Para no olvidar su funcionamiento
+    //std::ops::Range {start : 1, end : (num as u64) + 1}.fold(1, |acc, n| acc * n)
+    std::ops::Range {start : 1, end : (num as u64) + 1}.product::<u64>() //product multiplica todos los elementos de un interador y devuelve el producto
 }
 
 fn main() {
